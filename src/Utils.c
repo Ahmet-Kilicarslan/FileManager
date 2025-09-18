@@ -45,6 +45,7 @@ void exit_program(void) {
 int get_menu_choice(void) {
 
 int choice;
+
     scanf("%d", &choice);
 
     while (getchar() != '\n') {

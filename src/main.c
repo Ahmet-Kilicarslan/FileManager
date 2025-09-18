@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include<stdbool.h>
 
+#include "DirectoryOps.h"
 #include "../include/Utils.h"
 
 
@@ -16,14 +17,9 @@ int main(void) {
             exit_program();
             break;
         case 1:
-
+             display_directories();
             break;
-        case 2:
 
-            break;
-        case 3:
-
-            break;
     }
     return 0;
 }
