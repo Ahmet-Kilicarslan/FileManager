@@ -1,22 +1,31 @@
 #include <stdio.h>
 #include<stdbool.h>
 
-void increment(int *number);
+#include "../include/Utils.h"
+
+
 
 int main(void) {
-   /* int age = -990;
-    printf("age is  %+10d \n", age);
 
-    char name[] = "ahmet";
-    printf("name is  %s", name);*/
-int number =1;
-int* pNumber = &number;
+    display_main_menu();
 
-    increment(pNumber);
-    printf("number is  %d", number);
+    int choice = get_menu_choice();
+
+    switch (choice) {
+        case 0:
+            exit_program();
+            break;
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+    }
     return 0;
 }
 
-void increment(int *number) {
-    (*number)++;
-}
+

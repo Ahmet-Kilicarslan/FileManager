@@ -3,22 +3,27 @@
 #ifndef LION_FILEOPS_H
 #define LION_FILEOPS_H
 
-typedef struct {
-    char name[256];
-    char path[1024];
-    long size;
-    int is_dir;
-    char permissions[16];
-    char last_modified[64];
-    char extension[16];
-}FileInfo;
+#include "Types.h"
 
-typedef struct {
-    int OperationType;// 1=copy, 2=move, 3=delete, 4=create
-    char sourcePath[1024];
-    char destinationPath[1024];
-    char timeStamp[64];
-    int success;
-}
-FileOperation;
+//file operations
+int copy_file(const char* source, const char* destination);//returns 0 if success
+
+int delete_file(const char* filepath);
+
+int rename_file(const char* oldName, const char* newName);
+
+int move_file(const char* source, const char* destination);
+
+//file info functions
+FileInfo get_file_info( const char* filepath);
+
+void display_file_info(const FileInfo* file_info);
+
+int file_exists(const char* filepath);
+
+//helper functions
+long get_file_size(const char* filepath);
+
+char* get_file_extension(const char* filepath);
+
 #endif //LION_FILEOPS_H

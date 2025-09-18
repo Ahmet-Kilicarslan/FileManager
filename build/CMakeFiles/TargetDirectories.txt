@@ -1,0 +1,3 @@
+/home/ahmet/CLionProjects/Lion/build/CMakeFiles/Lion.dir
+/home/ahmet/CLionProjects/Lion/build/CMakeFiles/edit_cache.dir
+/home/ahmet/CLionProjects/Lion/build/CMakeFiles/rebuild_cache.dir

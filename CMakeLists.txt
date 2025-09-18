@@ -1,12 +1,24 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.20)
 project(Lion C)
 
+# Set C standard
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Lion src/main.c
-        src/FileOps.cpp
-        src/DirectoryOps.cpp
-        src/Utils.cpp
-        include/FileOps.h
-        include/DirectoryOps.h
-        include/Utils.h)
+# Tell CMake where to find header files
+include_directories(include)
+
+# Define source files (only .c files needed)
+set(SOURCES
+        src/main.c
+        src/Utils.c
+        src/FileOps.c
+        src/DirectoryOps.c
+)
+
+# Create the executable
+add_executable(Lion ${SOURCES})
+
+# Optional: Set output directory
+set_target_properties(Lion PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
+)
